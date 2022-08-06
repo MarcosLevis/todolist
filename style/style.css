@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*--oscuro: #16796F;
+--mediano: #7CB7AF;
+--claro: #CADEDF;*/
+:root {
+    --white: #fcfcfc;
+    --oscuro: #58948e;
+    --mediano: #43ad9f;
+    --claro: #CADEDF;
+    --gris: #97a89a;
+    --negro: #202023;
+}
+
+body {
+    background: linear-gradient(90deg, var(--mediano),var(--claro));   
+    height: 100vh;
+    font-family: 'Gantari', sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600;
+    margin: 0 auto;
+}
+
+/*PERFIL*/
+
+#fecha {
+    color: var(--white);
+    padding: 50px 0 5px 0;
+}
+
+
+.perfil h1{
+    color: var(--white);
+    margin-bottom: 3px;
+}
+.perfil span {
+    color: var(--white);
+    letter-spacing: 1px;
+    
+}
+
+/*AGREGAR TAREA*/
+
+.agregarTarea{
+    background-color: var(--white);
+    border-radius: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.agregarTarea input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white);
+}
+
+.agregarTarea i{
+    font-size: 25px;
+    color: var(--oscuro)
+}
+
+.agregarTarea i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.agregarTarea input::placeholder{
+    font-size: 1.1rem;
+    color: var(--gris);
+}
+
+/* SECCION TAREA */
+
+.seccionTarea h3{
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.seccionTarea li{
+    display: flex;
+    background: var(--white);
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.seccionTarea i{
+    font-size: 20px;
+    color: var(--oscuro);
+}
+
+.seccionTarea i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.seccionTarea > ul p{
+    font-size: 1.2rem;
+}
+.line-through{
+    text-decoration: line-through;
+    color: var(--oscuro);
+}

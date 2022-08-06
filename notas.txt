@@ -1,0 +1,65 @@
+APUNTES DE REPASO DE CONOCIMIENTOS ADQUIRIDOS O REFORZADOS DURANTE LA REALIZACION DE ESTE PEQUENIO PROYECTO:
+
+. data="realizado"
+
+CSS:
+
+. :root en css
+    clave para las paletas de colores, ordeno los colores en variables
+
+. resetea los parametros por defecto del navegador:
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+. css:
+
+.agregarTarea i:hover {             //hover: cuando paso el mouse x arriba hago los siguientes cambios
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.agregarTarea input::placeholder{
+    font-size: 1.1rem;
+    color: var(--gris);
+}
+
+
+.line-through{                          //tacha la palabra con el text decoration, dsps lo modifico con js
+    text-decoration: line-through;
+    color: var(--oscuro);
+}
+
+'fa-check-circle'
+
+
+JS:
+
+. En vez de usar getElementById, uso query selector atraves de las clases
+
+. Asi ultilizo el enter como un evento y que ocurra algo:
+
+document.addEventListener('keyup',function(event){
+    if(event.key == 'Enter'){
+        const tarea = input.value
+        if (tarea){
+            agregarTarea(tarea)
+        }
+        input.value=''
+    }
+})
+
+. Uso toggle para agregar clases
+. Uso parentode y querryselector para agregar el lineThrough
+
+.fecha actual en la pag:
+    new Date() un metodo ya existente en js
+    toLocaleDateString('es-MX',{weekday:'long', month:'short', day: 'numeric'})
+
+
+.Local storage:
+para usar el local storage almaceno toda la lista en un vector
+localStorage.setItem('todo',JSON.stringify(LIST))
